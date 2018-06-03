@@ -27,6 +27,10 @@ class AllData:
 		Stores data in class AllData
 		"""
 		self.application_train = []
+		self.application_test = []
 
-	def import_data(self):
+	def import_train_data(self):
 		self.application_train = pd.read_csv("~/.kaggle/competitions/home-credit-default-risk/application_train.csv")
+
+	def import_test_data(self):
+		self.application_test = pd.read_csv("~/.kaggle/competitions/home-credit-default-risk/application_test.csv")

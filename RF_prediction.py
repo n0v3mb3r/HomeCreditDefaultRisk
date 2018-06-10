@@ -29,7 +29,7 @@ test = pd.get_dummies(data.application_test[features])
 
 predictions = pd.DataFrame(rfc.predict(test))
 
-export = pd.concat(data.application_test["SK_ID_CURR"], predictions, axis = 1)
+export = pd.concat((data.application_test['SK_ID_CURR'], predictions[1]), axis = 1)
 export_headers = ["SK_ID_CURR","TARGET"]
 export.columns = export_headers
 
